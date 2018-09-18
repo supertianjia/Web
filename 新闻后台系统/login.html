@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>登陆</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+		
+		<link rel="stylesheet" href="css/login.css" />
+	</head>
+	<body onload="chengeCode()">
+		<header>
+			<div class="logo">
+				<img src="img/logo.png" />
+			</div>
+		</header>
+		<div id="banner">
+			<div class="reg_box">
+			<form action="index.html" method="post" onsubmit="return checkForm2()" >
+			<div class="reg_box_text">
+				<div class="text" id="text1">
+					<span><img src="img/用户.png" style="height: 23px; width: 23px;"></span>
+					<input id="value" onfocus="shoeTips('hint','用户名长度不能小于六')" onblur="hint_hide()" onkeyup="hint()" type="text" Name="Userame" placeholder="用户名" />
+					<span id="hint"></span>
+				</div>
+				<div class="text" id="text2">
+					<span><img src="img/密码.png"/ style="height: 23px; width: 23px;"></span>
+					<input id="pass_value" onfocus="shoeTips('pass_hint','密码长度不能小于六')" onblur="pass_hide()" onkeyup="checkPass()" type="password" name="password" placeholder="密码" />
+					<span id="pass_hint"></span>
+				</div>
+				<div class="text">
+					<input id="yan" type="text" name="yan" placeholder="请输入验证码" onblur="checkCode()"/>
+					<span id="yan_code" onclick="chengeCode()"></span>			
+					 <!-- <input id="change_btn" type="button" value="换一个" onclick="chengeCode()"/>-->
+				</div>
+				<div class="change_code">
+					<p>看不清楚？<a href="#" onclick="chengeCode()">换一个</a></p>	
+				</div>
+				
+				<div class="submit">
+					<input type="submit" value="立即登陆" />
+				</div>
+			</div>
+		</form>
+		<p class="p_login">还没有账号,<a href="register.html">立即注册»</a></p>
+		</div>
+		</div>
+		
+		<footer>
+			<div class="foot">
+				<p>XXX股份有限公司</p>
+				<p>Copyright&copy;版权所有2018-2019</p>
+			</div>
+		</footer>
+		<script src="js/regutils.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/check.js"></script>
+		<script type="text/javascript" src="jquery-1.11.3/jquery.min.js" ></script>
+		<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.js" ></script>
+	</body>
+
+</html>

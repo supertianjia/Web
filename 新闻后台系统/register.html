@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>注册</title>
+		<script src="js/regutils.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/check.js"></script>
+		<link rel="stylesheet" href="css/regutils.css" />
+	</head>
+	<style>
+		header{
+				height: 120px;
+				width: 960px;
+				margin: 0 auto;
+			}
+			header .logo{			
+				width: 100%;
+				height: 100%;
+				line-height: 120px;
+			}
+	</style>
+	<body onload="chengeCode()">
+		<header>
+			<div class="logo">
+				<img src="img/logo.png" />
+			</div>
+		</header>	
+		<div class="banner">
+			<div class="reg_box">
+			<form action="demo.html" method="post" onsubmit="return checkForm()" >
+			<div class="reg_box_text">
+				<div class="text">
+					<p>用户名:</p>
+					<input id="value" onfocus="shoeTips('hint','用户名长度不能小于六')" onblur="hint_hide()" onkeyup="hint()" type="text" Name="Userame" placeholder="用户名" />
+					<span id="hint"></span>
+				</div>
+				<div class="text">
+					<p>密码:</p>
+					<input id="pass_value" onfocus="shoeTips('pass_hint','密码长度不能小于六')" onblur="pass_hide()" onkeyup="checkPass()" type="password" name="password" placeholder="密码" />
+					<span id="pass_hint"></span>
+				</div>
+				<div class="text">
+					<p>确认密码:</p>
+					<input id="passpass_value" onfocus="shoeTips('passpass_hint','两次密码要一致')" onblur="passpass_hide()" onkeyup="checkPassPass()" type="password" name="password" placeholder="确认密码" />
+					<span id="passpass_hint"></span>
+				</div>
+				<div class="text">
+					<p>邮箱:</p>
+					<input id="email" onfocus="shoeTips('email_hint','邮箱格式要正确')" onblur="emailHide()" onkeyup="emailCheck()" type="email" name="email" placeholder="邮箱" />
+					<span id="email_hint"></span>
+				</div>
+				<div class="text">
+					<p>手机号:</p>
+					<input id="phone" type="text" onfocus="shoeTips('phone_hint','格式为十一位数字的手机号')" onblur="phoneHide()" onkeyup="phoneCheck()" Name="Phone" placeholder="手机号">
+					<span id="phone_hint"></span>
+				</div>
+				<div class="text">
+					<p>验证码:</p>
+					<input id="yan" type="text" name="yan" placeholder="请输入验证码" onblur="checkCode()"/>
+					<span id="yan_code" onclick="chengeCode()"></span>			
+					 <!-- <input id="change_btn" type="button" value="换一个" onclick="chengeCode()"/>-->
+				</div>
+				<div class="change_code">
+					<p>看不清楚？<a href="#" onclick="chengeCode()">换一个</a></p>	
+				</div>
+				<div class="submit">
+					<input type="submit" value="立即注册" />
+				</div>
+				
+			</div>
+		</form>
+		<p class="p_login">已有账号,<a href="login.html">直接登录»</a></p>
+		</div>
+		</div>
+		
+		<footer>
+			<div class="foot">
+				<p>XXX股份有限公司</p>
+				<p>Copyright&copy;版权所有2018-2019</p>
+			</div>
+		</footer>
+	</body>
+
+</html>

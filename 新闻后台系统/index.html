@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>主页</title>
+	</head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<script src="js/check.js"></script>
+	<body>
+		<header>
+			<div class="logo">
+				<img src="img/tit.png" />
+			</div>
+			<div class="tan"></div>
+			<div class="button_exit">
+				<input type="button" value="安全退出" />
+			</div>
+		</header>
+		<nav>
+			<div class="nav_left">
+				当前用户：
+				<span>管理员001</span>
+			</div>
+			<div class="nav_right">
+				当前： 首页>
+				<span id="nav_text">用户管理</span>
+			</div>
+		</nav>
+		<div class="flex">
+			<article>
+			<div class="user_mannager" onclick="user_right()">
+				账户管理
+			</div>
+			<div class="column_mannger" onclick="coulmn_right()">
+				栏目管理
+			</div>
+			<div class="news_mannger" onclick="news_right()">
+				新闻管理
+			</div>
+		</article>
+		<aside>
+			<div class="text">
+				<span id="user_text">
+						账户管理
+				</span>
+			</div>
+			<div class="search">
+				<input type="text" placeholder="用户名" />
+				<div class="search_img"><img src="img/search.png"/></div>
+			</div>
+			
+			
+			<!--
+            	作者：1304831203@qq.com
+            	时间：2018-09-14
+            	描述：add user
+            -->
+			<div id="add_count" class="add_count">
+				<div class="add_text">
+					<p>添加账户</p>
+					<i id="add_exit" onclick="add_exit()"><img src="img/close.png"/></i>
+				</div>
+				<div class="user_name">
+					<span>用户名</span>
+					<input type="text" placeholder="用户名" name="userName"/>
+				</div>
+				<div class="user_pass">
+					<span>密码</span>
+					<input type="password" placeholder="密码" name="passWord"/>
+				</div>
+				<div id="user_button" class="user_button">
+					<input type="submit" value="确&nbsp;&nbsp;定" onclick="button_user()"/>
+				</div>
+			</div>
+			<!--
+            	作者：1304831203@qq.com
+            	时间：2018-09-14
+            	描述：编辑窗口
+            -->
+			<div id="change_count" class="add_count">
+				<div class="add_text">
+					<p>编辑账户</p>
+					<i id="exit_change" onclick="exit_change()"><img src="img/close.png"/></i>
+				</div>
+				<div class="change_text" id="change_text">
+					正在编辑“
+					<i id="user_id" style="color: #007FB0;">XXX</i>
+					”用户
+				</div>
+				<div class="user_name">
+					<span>用户名</span>
+					<input type="text" placeholder="用户名" name="userName"/>
+				</div>
+				<div class="user_pass">
+					<span>密码</span>
+					<input type="password" placeholder="密码" name="passWord"/>
+				</div>
+				<div id="user_button_change" class="user_button">
+					<input type="submit" value="确&nbsp;&nbsp;定" onclick="button_change()"/>
+				</div>
+			</div>
+			<!--
+            	作者：1304831203@qq.com
+            	时间：2018-09-14
+            	描述：delete user
+            -->
+            <div id="delete_count" class="add_count">
+				<div class="add_text">
+					<p>删除账户</p>
+					<i id="exit_change" onclick="exit_delete()"><img src="img/close.png"/></i>
+				</div>
+				<div class="change_text" id="change_text">
+					确定删除“
+					<i id="user_id" style="color: red;">XXX</i>
+					”用户吗？
+				</div>
+				<div id="user_button_delete" class="user_button">
+					<input type="submit" value="确&nbsp;&nbsp;定" onclick="button_delete()"/>
+				</div>
+			</div>
+			<div class="user_oper" id="user_oper">
+				<div class="insert"></div>
+				<input type="button" value="添加" id="button_one" onclick="add_user()"/>
+				<input type="button" value="编辑" id="button_two" onclick="change_user()"/>
+				<input type="button" value="删除" id="button_three" onclick="delete_count()"/>
+				<input type="button" value="账号授权" id="button_four" />	
+			</div>
+			<div id="user_list" class="user_list ">
+				<table class="table table-striped table-hover">
+					<tbody>
+						<tr>
+							<th>
+								<input type="checkbox" />
+								用户名
+							</th>
+							<th>密码</th>
+							<th>授权形式</th>	
+						</tr>
+						<tr>
+							<td colspan="3" style="text-align: center; color: red;">
+								未添加任何账户！！
+							</td>						
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" />
+								lanyu
+							</td>
+							<td>123456789</td>
+							<td>账户、栏目、新闻</td>							
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" />
+								lanyu
+							</td>
+							<td>123456789</td>
+							<td>账户、栏目、新闻</td>							
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" />
+								lanyu
+							</td>
+							<td>123456789</td>
+							<td>账户、栏目、新闻</td>							
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" />
+								lanyu
+							</td>
+							<td>123456789</td>
+							<td>账户、栏目、新闻</td>							
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" />
+								lanyu
+							</td>
+							<td>123456789</td>
+							<td>账户、栏目、新闻</td>							
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" />
+								lanyu
+							</td>
+							<td>123456789</td>
+							<td>账户、栏目、新闻</td>							
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" />
+								lanyu
+							</td>
+							<td>123456789</td>
+							<td>账户、栏目、新闻</td>							
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" />
+								lanyu
+							</td>
+							<td>123456789</td>
+							<td>账户、栏目、新闻</td>							
+						</tr>
+					</tbody>
+				</table>
+				<div class="page">
+					<ul class="pagination">
+					  <li><a href="#">上一页</a></li>
+					  <li class="active"><a href="#">1</a></li>
+					  <li><a href="#">2</a></li>
+					  <li><a href="#">3</a></li>
+					  <li><a href="#">4</a></li>
+					  <li><a href="#">5</a></li>
+					 <li><a href="#">下一页</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="column_list" id="column_list"style="display: none;">
+				<table class="table table-striped table-hover">
+					<tbody>
+						<tr>
+							<th>
+								<input type="checkbox" />
+								序号
+							</th>
+							<th>栏目名称</th>
+						</tr>
+						<tr>
+							<td colspan="2" style="color: red; text-align: center;">
+								未添加任何栏目！！！
+							</td>
+						</tr>
+						<tr>
+							<td>01</td>
+							<td>新闻组、账户处、栏目组</td>
+						</tr>
+						<tr>
+							<td>02</td>
+							<td>新闻组、账户处、栏目组</td>
+						</tr>
+						<tr>
+							<td>03</td>
+							<td>新闻组、账户处、栏目组</td>
+						</tr>
+						<tr>
+							<td>04</td>
+							<td>新闻组、账户处、栏目组</td>
+						</tr>
+						<tr>
+							<td>05</td>
+							<td>新闻组、账户处、栏目组</td>
+						</tr>
+						<tr>
+							<td>06</td>
+							<td>新闻组、账户处、栏目组</td>
+						</tr>
+						<tr>
+							<td>07</td>
+							<td>新闻组、账户处、栏目组</td>
+						</tr>
+						<tr>
+							<td>08</td>
+							<td>新闻组、账户处、栏目组</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="page">
+					<ul class="pagination">
+					  <li><a href="#">上一页</a></li>
+					  <li class="active"><a href="#">1</a></li>
+					  <li><a href="#">2</a></li>
+					  <li><a href="#">3</a></li>
+					  <li><a href="#">4</a></li>
+					  <li><a href="#">5</a></li>
+					 <li><a href="#">下一页</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="news_list" id="news_list" style="display: none;">
+				<div class="news_list_hrader">
+					发布新闻
+				</div>
+				<div class="news_list_body">
+					<div class="news_content">
+						<div class="news_content_title">
+							<span>标题</span>
+							<input type="text" placeholder="填写标题" />
+						</div>
+						<div class="news_content_column">
+							<span>栏目</span>
+							<select>
+								<option>选择栏目</option>
+								<option>栏目组</option>
+								<option>栏目组</option>
+								<option>栏目组</option>
+								<option>栏目组</option>
+							</select>
+						</div>
+						<div class="news_content_text">
+							<textarea placeholder="编辑正文">
+								
+							</textarea>
+						</div>
+						<div class="news_content_button">
+							<input type="button" value="提&nbsp;&nbsp;交" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</aside>
+		</div>
+		
+		<footer></footer>
+		<script type="text/javascript" src="jquery-1.11.3/jquery.js" ></script>
+		<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.js" ></script>
+	</body>
+
+</html>

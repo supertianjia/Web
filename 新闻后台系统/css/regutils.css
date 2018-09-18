@@ -1,0 +1,100 @@
+* {
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				
+			}
+			header{
+				margin-top: 60px;
+				margin-bottom: 30px;
+			}
+			header h1{
+				text-align: center;
+			}
+			.banner{
+				background: url(../img/banner.jpg);
+				height: 520px;
+				position: relative;
+			}
+			.reg_box{
+				width: 540px;
+				position: absolute;
+				top:15px;
+				right: 100px;
+				height: 490px;
+				float: right;
+				border: #808080 solid 1px;
+				background-color: #F9F9FA;
+				border-radius: 5px;
+			}
+			.reg_box .reg_box_text{
+				margin:30px 0 0 80px;
+				width: 450px;
+			}
+			.text {
+				height: 60px;
+				vertical-align: middle;	
+			}
+			
+			.text p {
+				float: left;
+				text-align: right;
+				width: 80px;
+				margin-top: 5px;
+				font-weight: bold;
+			}
+			
+			.text input {
+				height: 30px;
+				width: 180px;
+				margin-left: 10px;
+				border-radius: 2px;
+				border: gray solid 1px;
+			}	
+			.text #yan{
+				width: 80px;
+			}	
+			.text #yan_code{
+				background: url(../img/bg2.jpg) center center;
+				padding: 5px 10px;
+				margin-left: 15px;
+				cursor: pointer;
+			}
+			.change_code{
+				margin-left: 130px;
+				margin-bottom: 20px;
+				margin-top: -20px;
+			}
+			.submit input{
+				width: 186px;
+				height: 32px;
+				background:url(../img/bg2.jpg) center center;
+				border:#FFFFFF solid 1px;
+				border-radius: 5px;
+				font-size: 14px;
+				margin-left: 88px;
+				cursor: pointer;
+				color: white;
+				margin-top: -10px;
+			}	
+			.p_login{
+				margin-top: 8px;
+				margin-left: 220px;
+			}
+			#hint,
+			#pass_hint,
+			#passpass_hint,
+			#email_hint,
+			#phone_hint {
+				font-size: 14px;
+				color: red;
+				font-family: arial;
+			}
+			footer .foot{
+				height: 60px;
+				padding: 10px  0 0 0;
+				text-align: center;
+				line-height: 30px;
+				color: #808080;
+			}
